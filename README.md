@@ -21,22 +21,22 @@ I have provided a batch file ![msvc_cleanup.bat](https://github.com/aminiqbal/ms
 __PLEASE NOTE THAT YOU MUST RUN THE .BAT FILE BY RIGHT-CLICKING ON IT AND SELECTING:__ ```Run as administrator``` __OTHERWISE THE REGISTRY CHANGES WILL NOT BE MADE.__
 
 What is going on in the __.bat__ file is this (You may inspect the file to confirm):
-	* I construct lines to add to a __.reg__ file.
-	* I write these lines to an actual instance of a __.reg__ file and place it in the same directory as the __.bat__ file. The file is called ```file.reg```. This file will make the necessary changes to the system registry.
-	* I execute the __.reg__ file in a silent way, so you do not have to go through multiple dialog prompts. I do this via this command:
-	```
-	%WINDIR%\system32\reg.exe import file.reg
-	```
-	* I _delete_ the __.reg__ file to clean up _my_ mess. You see, I'm not _Microsoft_.
-	* I will then reset the __icon cache__ of your user instance so you don't have to log out/ reset your PC to remove file associations and MSVC icons appearing for source code files. I do this via this command:
-	```
-	start ie4uinit.exe -show
-	```
-	* You should see a dialog:
-	```
-	---- MSVC MESS CLEANED ----
-	```
-	* The program exits on a _key press_.
+* I construct lines to add to a __.reg__ file.
+* I write these lines to an actual instance of a __.reg__ file and place it in the same directory as the __.bat__ file. The file is called ```file.reg```. This file will make the necessary changes to the system registry.
+* I execute the __.reg__ file in a silent way, so you do not have to go through multiple dialog prompts. I do this via this command:
+```
+%WINDIR%\system32\reg.exe import file.reg
+```
+* I _delete_ the __.reg__ file to clean up _my_ mess. You see, I'm not _Microsoft_.
+* I will then reset the __icon cache__ of your user instance so you don't have to log out/ reset your PC to remove file associations and MSVC icons appearing for source code files. I do this via this command:
+```
+start ie4uinit.exe -show
+```
+* You should see a dialog:
+```
+---- MSVC MESS CLEANED ----
+```
+* The program exits on a _key press_.
 
 __PLEASE NOTE THAT YOU MUST RUN THE .BAT FILE BY RIGHT-CLICKING ON IT AND SELECTING:__ ```Run as administrator``` __OTHERWISE THE REGISTRY CHANGES WILL NOT BE MADE.__
 
