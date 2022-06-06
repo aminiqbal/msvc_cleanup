@@ -57,9 +57,9 @@ Example:
 	```
 	* Adding to the provided __.bat__ file and running it __as administrator__ again. Values that were previously removed will simply be ignored, unless you've configured them - in which case, they will be removed as well.
 		* Please note that in this case, you will have to add your lines __before__ the line:
-    ```
-    >file.reg
-    ```
+		```
+		>file.reg
+		```
 		and for __every__ one of your desired key paths with a ```^``` followed by __1 blank line__. This is just some __.bat__ oddity will output proper lines to the file since __.reg__ files are sensitive to lines. An example would be (__please make sure not to add an extra__ ```>file.reg``` __to the code again__):
 		```
 		...
